@@ -362,6 +362,8 @@ int main() {
         // printf("%d", varcToggle);
         allcToggle = 1;
         nocToggle = 1;
+        randOptPower2 = 0;
+        randOptPower3 = 0;
       } else if (randOpt == 2) {
         allcToggle = !allcToggle;
         if (allcToggle == 1) {
@@ -371,6 +373,8 @@ int main() {
         }
         varcToggle = 1;
         nocToggle = 1;
+        randOptPower1 = 0;
+        randOptPower3 = 0;
       } else if (randOpt == 3) {
         nocToggle = !nocToggle;
         if (nocToggle == 1) {
@@ -380,6 +384,8 @@ int main() {
         }
         varcToggle = 1;
         allcToggle = 1;
+        randOptPower1 = 0;
+        randOptPower2 = 0;
       } else if (randOpt == 4) {
         numToggle = !numToggle;
         if (numToggle == 1) {
