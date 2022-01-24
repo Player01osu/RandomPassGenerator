@@ -1,6 +1,6 @@
 
 # Random Password Generator
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;THIS IS AWEFUL LMAO
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;THIS IS AWFUL LMAO
 
 
