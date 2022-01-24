@@ -479,6 +479,9 @@ int main() {
         system("clear");
         printf("%s", randstring56(lengOpt));
         randChoose = 4;
+      } else {
+        printf("you must have at least ONE option ticked");
+        randChoose = 0;
       }
     }
   }
