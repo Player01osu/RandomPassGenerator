@@ -3,6 +3,7 @@
 #include <string.h>
 #include <time.h>
 
+// Var caps only
 char *randstring2(size_t length) {
 
   static char charset[] =
@@ -25,6 +26,7 @@ char *randstring2(size_t length) {
   return randomString;
 }
 
+// All caps only
 char *randstring4(size_t length) {
 
   static char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -45,6 +47,8 @@ char *randstring4(size_t length) {
 
   return randomString;
 }
+
+// No caps only
 char *randstring8(size_t length) {
 
   static char charset[] = "abcdefghijklmnopqrstuvwxyz";
@@ -65,6 +69,8 @@ char *randstring8(size_t length) {
 
   return randomString;
 }
+
+// Numbers only
 char *randstring16(size_t length) {
 
   static char charset[] = "0123456789";
@@ -85,6 +91,8 @@ char *randstring16(size_t length) {
 
   return randomString;
 }
+
+// Numbers + var caps
 char *randstring18(size_t length) {
 
   static char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -106,6 +114,8 @@ char *randstring18(size_t length) {
 
   return randomString;
 }
+
+// Numbers + all caps
 char *randstring20(size_t length) {
 
   static char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -127,6 +137,8 @@ char *randstring20(size_t length) {
 
   return randomString;
 }
+
+// Numbers + no caps
 char *randstring24(size_t length) {
 
   static char charset[] = "abcdefghijklmnopqrstuvwxyz"
@@ -148,6 +160,8 @@ char *randstring24(size_t length) {
 
   return randomString;
 }
+
+// Symbols only
 char *randstring32(size_t length) {
 
   static char charset[] = ",.-#!@$^><`~'?!%%*+-=_/)(&";
@@ -168,6 +182,8 @@ char *randstring32(size_t length) {
 
   return randomString;
 }
+
+// Symbols + var caps
 char *randstring34(size_t length) {
 
   static char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -189,6 +205,8 @@ char *randstring34(size_t length) {
 
   return randomString;
 }
+
+// Symbols + all caps
 char *randstring36(size_t length) {
 
   static char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -210,6 +228,8 @@ char *randstring36(size_t length) {
 
   return randomString;
 }
+
+// Symbols + no caps
 char *randstring40(size_t length) {
 
   static char charset[] = "abcdefghijklmnopqrstuvwxyz"
@@ -231,6 +251,8 @@ char *randstring40(size_t length) {
 
   return randomString;
 }
+
+// Numbers + symbols
 char *randstring48(size_t length) {
 
   static char charset[] = "0123456789,.-#!@$^><`~'?!%%*+-=_/)(&";
@@ -251,6 +273,8 @@ char *randstring48(size_t length) {
 
   return randomString;
 }
+
+// Var caps + numbers + symbols
 char *randstring50(size_t length) {
 
   static char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -272,6 +296,8 @@ char *randstring50(size_t length) {
 
   return randomString;
 }
+
+// All caps + numbers + symbols
 char *randstring52(size_t length) {
 
   static char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -293,6 +319,8 @@ char *randstring52(size_t length) {
 
   return randomString;
 }
+
+// No caps + numbers + symbols
 char *randstring56(size_t length) {
 
   static char charset[] = "abcdefghijklmnopqrstuvwxyz"
@@ -323,23 +351,28 @@ int main() {
   printf(" !! Do not use to actually generate your passwords, lmao !!\n");
   printf("============================================================= \n");
 
+  // assign random options choosen to power of 2
   int randOptPower1 = 2;
   int randOptPower2 = 0;
   int randOptPower3 = 0;
   int randOptPower4 = 16;
   int randOptPower5 = 32;
 
+  // draw empty space or x
   char varCaps[] = "x ";
   char allCaps[] = "x ";
   char noCaps[] = "x ";
   char numbersO[] = "x ";
   char symbolsO[] = "x ";
+
+  // 0 == enabled, 1 == disabled
   int varcToggle = 0;
   int allcToggle = 1;
   int nocToggle = 1;
   int numToggle = 0;
   int symToggle = 0;
 
+  // randChoose determines 1. which step user is on, 2. whether to break loop
   int randChoose = 0;
   while (randChoose <= 3) {
     while (randChoose == 0) {
@@ -352,6 +385,8 @@ int main() {
 
       scanf("%d", &randOpt);
 
+      // long ass if statement determine if option choosen was valid and toggle
+      // option
       if (randOpt == 1) {
         varcToggle = !varcToggle;
         if (varcToggle == 1) {
@@ -418,6 +453,7 @@ int main() {
       if (lengOpt >= 8 && lengOpt <= 40 && lengOpt != 727) {
         randChoose = 2;
       } else if (lengOpt == 727) {
+        // randChoose == 0 satisfies condition to loop to first step
         randChoose = 0;
       }
     } // End while loop lengOpt
@@ -425,6 +461,8 @@ int main() {
     while (randChoose == 2) {
       int finalPassPower = (randOptPower1 + randOptPower2 + randOptPower3 +
                             randOptPower4 + randOptPower5);
+      /* finalPassPower refers to the value given when adding all the
+         randOptPower, and calling the respective function*/
       if (finalPassPower == 2) {
         system("clear");
         printf("%s", randstring2(lengOpt));
