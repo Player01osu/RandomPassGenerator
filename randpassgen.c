@@ -416,70 +416,70 @@ int main() {
       }
     } // End while loop lengOpt
     // generate rand pass based on user input
-    int finalPassPower = (randOptPower1 + randOptPower2 + randOptPower3 +
-                          randOptPower4 + randOptPower5);
-    // printf("%d", finalPassPower);
-
-    if (finalPassPower == 2) {
-      system("clear");
-      printf("%s", randstring2(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 4) {
-      system("clear");
-      printf("%s", randstring4(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 8) {
-      system("clear");
-      printf("%s", randstring8(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 16) {
-      system("clear");
-      printf("%s", randstring16(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 18) {
-      system("clear");
-      printf("%s", randstring18(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 20) {
-      system("clear");
-      printf("%s", randstring20(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 24) {
-      system("clear");
-      printf("%s", randstring24(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 32) {
-      system("clear");
-      printf("%s", randstring32(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 34) {
-      system("clear");
-      printf("%s", randstring34(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 36) {
-      system("clear");
-      printf("%s", randstring36(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 40) {
-      system("clear");
-      printf("%s", randstring40(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 48) {
-      system("clear");
-      printf("%s", randstring48(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 50) {
-      system("clear");
-      printf("%s", randstring50(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 52) {
-      system("clear");
-      printf("%s", randstring52(lengOpt));
-      randChoose = 4;
-    } else if (finalPassPower == 56) {
-      system("clear");
-      printf("%s", randstring56(lengOpt));
-      randChoose = 4;
+    while (randChoose == 2) {
+      int finalPassPower = (randOptPower1 + randOptPower2 + randOptPower3 +
+                            randOptPower4 + randOptPower5);
+      if (finalPassPower == 2) {
+        system("clear");
+        printf("%s", randstring2(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 4) {
+        system("clear");
+        printf("%s", randstring4(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 8) {
+        system("clear");
+        printf("%s", randstring8(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 16) {
+        system("clear");
+        printf("%s", randstring16(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 18) {
+        system("clear");
+        printf("%s", randstring18(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 20) {
+        system("clear");
+        printf("%s", randstring20(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 24) {
+        system("clear");
+        printf("%s", randstring24(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 32) {
+        system("clear");
+        printf("%s", randstring32(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 34) {
+        system("clear");
+        printf("%s", randstring34(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 36) {
+        system("clear");
+        printf("%s", randstring36(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 40) {
+        system("clear");
+        printf("%s", randstring40(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 48) {
+        system("clear");
+        printf("%s", randstring48(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 50) {
+        system("clear");
+        printf("%s", randstring50(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 52) {
+        system("clear");
+        printf("%s", randstring52(lengOpt));
+        randChoose = 4;
+      } else if (finalPassPower == 56) {
+        system("clear");
+        printf("%s", randstring56(lengOpt));
+        randChoose = 4;
+      }
     }
   }
 }
